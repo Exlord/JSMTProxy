@@ -95,6 +95,7 @@ function create_idle_server(id, ip) {
 	});
 
 	client.on('error', (err) => {
+		console.log(err);
 		client.destroy();
 	});
 
@@ -139,6 +140,7 @@ net.createServer(function(socket) {
 	socket.setTimeout(CON_TIMEOUT);
 
 	socket.on('error', (err) => {
+		console.log(err);
 		socket.destroy();
 	});
 
